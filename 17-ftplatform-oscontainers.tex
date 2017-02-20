@@ -1,0 +1,68 @@
+\documentclass[times,10pt,twocolumn]{IEEEtran} 
+%\documentclass{IEEEtran} 
+
+\usepackage{setspace}
+\usepackage{times}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{rotating}
+\usepackage[usenames]{color}
+\usepackage{setspace}
+\usepackage{tabularx,colortbl}
+\usepackage{subfigure}
+\usepackage{cite}
+\usepackage{multicol}
+\usepackage[usenames]{color}
+
+\usepackage[%
+        pdfcreator={http://sandia.gov},
+        pdftex,
+        colorlinks=true,
+        linkcolor={black},
+        citecolor={black},
+        urlcolor={black}]{hyperref}
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Program Float
+%
+\usepackage{float}
+
+\floatstyle{ruled}
+\newfloat{program}{thp}{lop}
+\floatname{program}{Program}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\input{tex/macros}
+
+\input{paper}
+
+\section*{Acknowledgment}
+Sandia National Laboratories is a multi-program laboratory managed and operated by Sandia Corporation, a wholly owned subsidiary of Lockheed Martin Corporation, for the U.S. Department of Energy’s National Nuclear Security Administration under contract DE-AC04-94AL85000.
+
+
+\bibliographystyle{tex/IEEEtran}
+
+
+\bibliography{bib/ajyounge,%
+bib/cyberaide-cloud,%
+bib/all,%
+bib/cyberaide-grid%
+}%
+
+
+%\clearpage
+%\appendix
+%\input{todo}
+
+\end{document}
+
+
