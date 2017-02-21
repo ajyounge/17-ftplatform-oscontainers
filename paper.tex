@@ -5,14 +5,15 @@
 \newcommand{\E}[1]{{\color{red}~\blacksquare~\footnote{grammar, spelling, sentence, or other error}~}}
 
 \newcommand{\AUTHOR}{%
-Andrew J. Younge\\
+Andrew J. Younge, Kevin Pedretti, and Ron Brightwell\\
 Center for Computing Research \\
 Sandia National Laboratories \\
 P.O. Box 5800, MS-1319 \\
 Albuquerque, NM 87185-1110 \\
 Email: \{ajyoung\}@sandia.gov%
 }
-\newcommand{\TITLE}{Data Analytics through Containerization at Exascale Requires New OS Approaches}
+
+\newcommand{\TITLE}{Large Scale Data Analytics Demand Virtual Clusters for HPC systems}
 
 
 \title{\TITLE}
@@ -23,35 +24,33 @@ Email: \{ajyoung\}@sandia.gov%
 \begin{abstract}
 
 
+
+
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction}
+\section{Extended Abstract}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Currently, we are at the forefront of a convergence within scientific computing between High Performance Computing (HPC) and Large Scale Data Analytics (LSDA) \cite{reed2015exascale, leeland2016}. This amalgamation of historically differing viewpoints of Distributed Systems looks to force the combination of performance characteristics of HPC's pursuit towards Exascale with data and programmer oriented concurrency models found in Big Data analytics platforms.  Capitalizing upon the community's existing investiment in advanced supercomputing systems and economiges of scale could benefit both areas beyond what is current possible as disjoint environments.  However, current software efforts in each area have become extremely specialized and the gap only continues to grow, making the concurrent support with a single architectural model increasingly intractable.
+
+Instead, we postulate the embrasing of software diversity on advanced supercomputing platforms through the use of Virtual Clusters. \TODO{Describe the notion of virtual clusters} 
 
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Including Figures}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We expect virtualization to be a key aspect to providing Virtual Clusters, however the type and level of virtualization and its interactions with the underlying OS environment are still unknown.  Work is need to determine the most effective way to provide this level of abstraction necessary, and what tradeoffs are necessary in regards to performance considerations, cluster deployment efficiency, OS type and flexibility, hardware accessability, and others.  Host virtualization efforts as the Hobbes project \cite{hobbes} provide one example of an OS and virtualization effort that coudl enable the underpinnings necessary for Virtual Clusters.  OS-level virtualization, or container solutions such as Shifter and Singularity \cite{shiftercug2016, singularity} extend the notion of Docker towards an HPC environment by integrating within an existing HPC environment. Regardless, more 
+
+
+This will enable systems to focus more on application ecosystem compoistion to fit scientific products rather than andating applications into a running space that was never designed for such considerations. 
+\TODO{In situ analysis, on-node privisoning with support for intra and inter VC coupling, etc}
 
 
 
+Prpose virtual clusters to enable custom ecosystems independent of application types on the same hardware, rather than forcing one or the other ecosystems on applications. Still share the same hardware.
 
 
-\subsection{More Results}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-More results listed here.
- 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusion}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Put your conclusions in this section
 
 
 
