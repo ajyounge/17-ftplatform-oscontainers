@@ -13,7 +13,7 @@ Albuquerque, NM 87185-1110 \\
 Email: \{ajyoung\}@sandia.gov%
 }
 
-\newcommand{\TITLE}{Large Scale Data Analytics Demand Virtual Clusters for HPC systems}
+\newcommand{\TITLE}{Emerging Computational Workloads Demand Virtual Clusters for Extreme-scale Systems}
 
 
 \title{\TITLE}
@@ -22,10 +22,8 @@ Email: \{ajyoung\}@sandia.gov%
 \maketitle
 
 \begin{abstract}
-
-
-
-
+Large Scale Data Analytics are gaining attention not only as a processing component to larger simulation workloads, but also as standalone scientific tools for knoweldge discovery, yet system software for such capabilities on the latest extreme-scale DOE systems has failed to support these types of appliation ecosystems.  Instead of datping these worklooads to traditional batch scheduling systems, we need a way to provision Virtual Clusters on advanced supercomputing resources to enable diverse software ecosystem support at scale. Emerging analytics workloads will not only be able to create user-defined environments suitable to their computational needs independent of batch schedulers or facilities software stacks, but also leverage advanced HPC hardware resources with experiment isolation and management. 
+ 
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,18 +37,16 @@ Instead, we postulate the embrasing of software diversity on advanced supercompu
 
 
 
-We expect virtualization to be a key aspect to providing Virtual Clusters, however the type and level of virtualization and its interactions with the underlying OS environment are still unknown.  Work is need to determine the most effective way to provide this level of abstraction necessary, and what tradeoffs are necessary in regards to performance considerations, cluster deployment efficiency, OS type and flexibility, workload reproducability, hardware accessability, and others.  Host virtualization efforts as the Hobbes project \cite{hobbes} provide one example of an OS and virtualization effort that coudl enable the underpinnings necessary for Virtual Clusters.  OS-level virtualization, or container solutions such as Shifter and Singularity \cite{shiftercug2016, singularity} extend the notion of Docker towards an HPC environment by integrating within an existing HPC environment. With either solution, there is software ecosystem research and design that needs to support Virtual Clusters, including image management, network segmentation, 
-
-
-Virtual Clusters will enable focus more on application ecosystem compoistion to fit scientific products rather than adapting development environemtns into a running space that was never designed for such considerations. VCs can also  
-\TODO{In situ analysis, on-node privisoning with support for intra and inter VC coupling, etc}
+We expect virtualization to be a key aspect to providing Virtual Clusters, however the type and level of virtualization and its interactions with the underlying OS environment are still unknown.  Work is need to determine the most effective way to provide this level of abstraction necessary, and what tradeoffs are necessary in regards to performance considerations, cluster deployment efficiency, OS type and flexibility, workload reproducability, hardware accessability, and others.  Host virtualization efforts as the Hobbes project \cite{hobbes} provide one example of an OS and virtualization effort that could enable the underpinnings necessary for Virtual Clusters.  OS-level virtualization, or container solutions such as Shifter and Singularity \cite{shiftercug2016, singularity} extend the notion of Docker towards an HPC environment by integrating within an existing HPC environment. Nevertheless, support irtual Clusters on advanced technology systems requires extensive distributed systems software research and development, with challenges including post-batch scheduling, image orchistration \&management, network segmentation, performance consideratins at extreme scale, and resiliancy, to name a few.
 
 
 
-Prpose virtual clusters to enable custom ecosystems independent of application types on the same hardware, rather than forcing one or the other ecosystems on applications. Still share the same hardware.
+Currently, workloads dissimilar from traditional parallel HPC siulations, such as emerging data analytics tools and visualization platforms are 
+
+Virtual Clusters will enable users to focus more on application ecosystem composition matching scientific endeavors rather than forcing the adaption of development environments to platforms that were never designed for such considerations.  Effectively, this can lower the barrier of entry to extreme-scale computing for many emerging coputational challenges.  Furthermore, such virtualized clusters enable more non-standard workflow composition, such as the in-situ coupling of parallel MPI simulations with emerging data analtyics and visualization tools for real-time experimental control, either across or within clusters. 
 
 
-
+Different from clusters in past, not based on commodity systems, but whole new system software architecture is needed.
 
 
 
