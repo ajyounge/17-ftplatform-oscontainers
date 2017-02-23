@@ -5,15 +5,15 @@
 \newcommand{\E}[1]{{\color{red}~\blacksquare~\footnote{grammar, spelling, sentence, or other error}~}}
 
 \newcommand{\AUTHOR}{%
-Andrew J. Younge, Kevin Pedretti, and Ron Brightwell\\
+Andrew J. Younge\\
 %Center for Computing Research \\
 Sandia National Laboratories \\
 P.O. Box 5800, MS-1319 \\
 Albuquerque, NM 87185-1110 \\
-Email: \{ajyoung,ktpredre,rbbrigh\}@sandia.gov%
+Email: \{ajyoung\}@sandia.gov%
 }
 
-\newcommand{\TITLE}{Emerging Computational Workloads Demand Virtual Clusters for Extreme-scale Systems}
+\newcommand{\TITLE}{Virtual Clusters to the Rescue: Analytics Workloads Demand Diverse Supercomputing Software Stacks}
 
 
 \title{\TITLE}
@@ -22,7 +22,7 @@ Email: \{ajyoung,ktpredre,rbbrigh\}@sandia.gov%
 \maketitle
 
 \begin{abstract}
-Large Scale Data Analytics workloads are gaining attention within the scientific community not only as a processing component to large HPC simulations, but also as standalone scientific tools for knowledge discovery. However, system software for such capabilities on the latest extreme-scale DOE supercomputing systems has failed to appropriately support these types of application ecosystems. Static batch job schedulers with vendor-specific OS and library services are tuned only for MPI-based execution models.  Instead of adapting analytics workloads to such a specific software environment, we need new mechanisms to provision Virtual Clusters on advanced supercomputing resources to enable diverse software ecosystem support at scale.  Emerging analytics workloads will not only be able to create user-defined environments suitable to their computational needs independent of facilities software stacks, but also leverage advanced HPC hardware resources often unavailable for use today.
+Large Scale Data Analytics workloads are gaining attention within the scientific community not only as a processing component to large HPC simulations, but also as standalone scientific tools for knowledge discovery. However, system software for such capabilities on the latest extreme-scale DOE supercomputing systems has failed to appropriately support these types of application ecosystems. Static batch job schedulers with vendor-specific OS and library services are tuned primarily for MPI-based execution models.  Instead of adapting analytics workloads to such a specific software environment, we need new mechanisms to provision Virtual Clusters on advanced supercomputing resources to enable diverse software ecosystem support at scale.  Emerging analytics workloads will not only be able to create user-defined environments suitable to their computational needs independent of facilities software stacks, but also leverage advanced HPC hardware resources often unavailable for use today.
 
 \end{abstract}
 
@@ -36,12 +36,12 @@ Instead, we postulate embracing this software diversity on advanced supercomputi
 
 %Furthermore, Virtual Clusters could enable the ability to uniquely couple both simulations and analytics for enhanced computational abilities, both intra and inter cluster.  
 
-We expect virtualization to be a key aspect to providing Virtual Clusters, however the type and level of virtualization and the interactions with the underlying OS \& runtime environment are still an unknown.  Work is needed to determine the most effective way to provide the level of system abstraction, and what trade-offs are necessary in regards to performance considerations, cluster deployment efficiency, OS type and flexibility, workload reproducibility, and advanced hardware accessibility.  Host-level virtualization efforts as the Hobbes project \cite{brightwell2013hobbes} is one example of a conjoined OS and virtualization effort that provides building blocks necessary for constructing Virtual Clusters.  OS-level virtualization, or container solutions such as Shifter \cite{jacobsen2015contain} and Singularity \cite{singularity} also offer a new potential component by extending the notion of Docker and integrate within existing HPC environments. While these various virtual abstractions as well as bare-metal OS provisioning \cite{baremetal} are important building blocks for Virtual Clusters within advanced technology systems, we still require extensive distributed systems software research and development to overcome the issues brought by batch processing mechanisms. This includes challenges including meta scheduling \& resource management, user-defined image creation \& orchestration, network segmentation \& isolation, and performance considerations at extreme scale, to name a few.  While the concept of Virtual Clusters originates from commodity cloud infrastructure development such tools like OpenStack \cite{openstackhpc, Younge2015hpvc}, their successful application within an advanced supercomputing infrastructure as described herein will likely require a new software architecture largely independent of existing cloud solutions.  
+We expect virtualization to be a key aspect to providing Virtual Clusters, however the type and level of virtualization and the interactions with the underlying OS \& runtime environment are still an unknown.  Work is needed to determine the most effective way to provide the level of system abstraction, and what trade-offs are necessary in regards to performance considerations, cluster deployment efficiency, OS type and flexibility, workload reproducibility, and advanced hardware accessibility.  Host-level virtualization efforts as the Hobbes project \cite{brightwell2013hobbes} is one example of a conjoined OS and virtualization effort that provides building blocks necessary for constructing Virtual Clusters.  OS-level virtualization, or container solutions such as Shifter \cite{jacobsen2015contain} and Singularity \cite{singularity} also offer a new potential component by extending the notion of Docker and integrate within existing HPC environments. While these various virtual abstractions as well as bare-metal OS provisioning are important building blocks for Virtual Clusters within advanced technology systems, we still require extensive distributed systems software research and development to overcome the issues brought by batch usage models. This includes challenges including meta scheduling \& resource management, user-defined image creation \& orchestration, network segmentation \& isolation, and performance considerations at extreme scale, to name a few.  While the concept of Virtual Clusters originates from commodity cloud infrastructure development such tools like OpenStack \cite{openstackhpc, Younge2015hpvc}, their successful application within an advanced supercomputing infrastructure as described herein will likely require a new software architecture largely independent of existing cloud solutions.  
 
 
 %Currently, workloads dissimilar from traditional parallel HPC siulations, such as emerging data analytics tools and visualization platforms are forced to work with batch schedulers and shared storage systems that  
 
-Virtual Clusters enable users to focus on application ecosystem composition matching scientific endeavors rather than forcing new development environments to adapt to platforms that were never made to support such designs.  Effectively, this can lower the barrier of entry to extreme-scale computing for many emerging computational tools embodied by the 4th paradigm of science \cite{hey2009fourth}. Additionally, we can construct a framework of scientific experiment management where Virtual Clusters and their environments can be rebuilt, shared, rerun, or archived upon demand across the greater scientific community.
+Virtual Clusters enable users to focus on application ecosystem composition matching scientific endeavors rather than forcing new development environments to adapt to platforms that were never made to support such designs.  Effectively, this can lower the barrier of entry to extreme-scale computing for many emerging computational tools embodied by the 4th paradigm of science \cite{hey2009fourth}. Additionally, we can construct a framework of scientific experiment management where Virtual Clusters and their environments can be built, shared, rerun, or archived upon demand across the greater scientific community.
 
 
 
